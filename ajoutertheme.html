@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter une réponse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),url('img/wallpaperflare.com_wallpaper (5).jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], select {
+            width: 20%;
+            max-width: 10px;
+            padding: 10px;
+            border: 1px solid #fd8700;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #fd8700;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-size: contain;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="consulter.php">
+        <img src="img/fleche.png" alt="icon" width="50" height="50"> 
+    </a>
+    <h1>Ajouter un pays :</h1>
+    <form action="ajouter_theme.php" method="POST" enctype="multipart/form-data">
+        <label for="titre">Sélectionnez un thème :</label>
+        <select id="titre" name="titre" style="max-width: 200px;">
+            <option value="pays">Pays</option>
+            <option value="logo">Logo</option>
+        </select>
+        <br><br>
+        <label for="reponse">Réponse :</label>
+        <input type="text" name="reponse" id="reponse" style="max-width: 200px;" required>
+        <br><br>
+        <label for="image" style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Image :</label>
+
+<div style=" align-items: center; margin-bottom: 20px;">
+  <div >
+    <input type="file" name="image" id="image" style="display: none;">
+    <label for="image" style="background-color: #fd8700; color: white; padding: 12px 20px; border-radius: 5px; font-size: 18px; cursor: pointer; max-width: 200px;">Choisir un fichier</label>
+  </div>
+
+  <div >
+    
+    <span id="image-name" style="font-size: 16px; font-weight: bold;">Aucun fichier sélectionné</span>
+  </div>
+</div>
+        
+        
+        <input type="submit" value="Ajouter">
+    </form>
+
+    
+</body>
+</html>
+
+
+
